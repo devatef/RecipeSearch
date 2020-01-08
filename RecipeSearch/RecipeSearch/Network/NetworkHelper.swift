@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import Alamofire
+
 class NetworkHelper {
     
    func getData(request:APIRequest){
-        
+    //Alamofire.request(URLRequestConvertible)
     }
     
 }

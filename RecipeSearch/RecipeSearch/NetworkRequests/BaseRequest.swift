@@ -9,5 +9,17 @@
 import Foundation
 
 protocol APIRequest {
-    init(endpiont:String,parms:Dictionary<String,Any>)
+    init(endpiont:String,parms:[String:Any])
+}
+
+extension APIRequest{
+    func appendSuffix(endpiont:String) -> String {
+        return EndPoints.BASE_URL+EndPoints.SEARCH_RECIPE_URL;
+    }
+    
+    func appendCommon(parms:inout [String:Any]) {
+        parms["app_id"]=APPLICATION_ID
+        parms["app_key"]=APPLICATION_KEY
+
+    }
 }
