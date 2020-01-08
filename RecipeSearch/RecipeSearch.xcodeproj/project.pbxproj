@@ -80,6 +80,12 @@
 		F0F5565423C66F0D000B587B /* RecipeSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F0F5566E23C6774A000B587B /* AppDelegate */,
+				F0F5566D23C67739000B587B /* ViewModels */,
+				F0F5566C23C67731000B587B /* Views */,
+				F0F5566B23C676C0000B587B /* Controllers */,
+				F0F5566A23C676AF000B587B /* Models */,
+				F0F5566923C6769C000B587B /* Network */,
 				F0F5565523C66F0D000B587B /* AppDelegate.swift */,
 				F0F5565723C66F0D000B587B /* SceneDelegate.swift */,
 				F0F5565923C66F0D000B587B /* ViewController.swift */,
@@ -89,6 +95,48 @@
 				F0F5566323C66F0F000B587B /* Info.plist */,
 			);
 			path = RecipeSearch;
+			sourceTree = "<group>";
+		};
+		F0F5566923C6769C000B587B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F0F5566A23C676AF000B587B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0F5566B23C676C0000B587B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F0F5566C23C67731000B587B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F0F5566D23C67739000B587B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F0F5566E23C6774A000B587B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
