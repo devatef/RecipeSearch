@@ -80,18 +80,14 @@
 		F0F5565423C66F0D000B587B /* RecipeSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F0F5566F23C67806000B587B /* Resources */,
 				F0F5566E23C6774A000B587B /* AppDelegate */,
 				F0F5566D23C67739000B587B /* ViewModels */,
 				F0F5566C23C67731000B587B /* Views */,
 				F0F5566B23C676C0000B587B /* Controllers */,
 				F0F5566A23C676AF000B587B /* Models */,
 				F0F5566923C6769C000B587B /* Network */,
-				F0F5565523C66F0D000B587B /* AppDelegate.swift */,
-				F0F5565723C66F0D000B587B /* SceneDelegate.swift */,
 				F0F5565923C66F0D000B587B /* ViewController.swift */,
-				F0F5565B23C66F0D000B587B /* Main.storyboard */,
-				F0F5565E23C66F0F000B587B /* Assets.xcassets */,
-				F0F5566023C66F0F000B587B /* LaunchScreen.storyboard */,
 				F0F5566323C66F0F000B587B /* Info.plist */,
 			);
 			path = RecipeSearch;
@@ -121,6 +117,8 @@
 		F0F5566C23C67731000B587B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0F5566023C66F0F000B587B /* LaunchScreen.storyboard */,
+				F0F5565B23C66F0D000B587B /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,8 +133,18 @@
 		F0F5566E23C6774A000B587B /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				F0F5565723C66F0D000B587B /* SceneDelegate.swift */,
+				F0F5565523C66F0D000B587B /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F0F5566F23C67806000B587B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0F5565E23C66F0F000B587B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
