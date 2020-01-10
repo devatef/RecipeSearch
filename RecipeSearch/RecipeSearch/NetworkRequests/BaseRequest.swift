@@ -9,7 +9,7 @@
 import Foundation
 
 protocol APIRequest {
-    init(endpiont:String,parms:[String:Any])
+    init(parms:[String:Any])
 }
 
 extension APIRequest{

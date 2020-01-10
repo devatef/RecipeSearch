@@ -14,8 +14,8 @@ class RecipeSearchRequest: APIRequest {
     private var url:String="";
     private var parameters:[String: Any]=[:]
     
-    required init(endpiont: String, parms:[String:Any]) {
-        url = appendSuffix(endpiont: endpiont)
+    required init(parms:[String:Any]) {
+        url = appendSuffix(endpiont: EndPoints.SEARCH_RECIPE_URL)
         parameters = parms
         appendCommon(parms: &parameters)
     }
