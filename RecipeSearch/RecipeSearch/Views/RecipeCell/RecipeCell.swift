@@ -21,4 +21,21 @@ class RecipeCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    var item: Hit? {
+          didSet {
+            guard  let item = item else {
+                  return
+              }
+              //set data here
+          }
+      }
+      
+      static var nib:UINib {
+          return UINib(nibName: identifier, bundle: nil)
+      }
+      
+      static var identifier: String {
+          return String(describing: self)
+      }
+    
 }
