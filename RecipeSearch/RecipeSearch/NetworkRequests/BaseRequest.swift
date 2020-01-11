@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol APIRequest {
     init(parms:[String:Any])
+    func urlRequest() -> URLRequest
 }
 
 extension APIRequest{

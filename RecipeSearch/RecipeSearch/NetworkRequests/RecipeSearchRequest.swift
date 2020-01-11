@@ -20,12 +20,12 @@ class RecipeSearchRequest: APIRequest {
         appendCommon(parms: &parameters)
     }
 
-    func urlRequest() -> DataRequest  {
+    func urlRequest() -> URLRequest  {
 
         return Alamofire.request(url, method: .get,
                                    parameters: parameters,
                                    encoding: URLEncoding.default,
-                                   headers: ["Content-Type": "application/json"])
+                                   headers: ["Content-Type": "application/json"]).request!
         
     }
 
