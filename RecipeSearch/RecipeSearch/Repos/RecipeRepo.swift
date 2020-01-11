@@ -16,23 +16,23 @@ class RecipeRepo {
             NetworkHelper.shared.getData(urlRequest: RecipeSearchRequest(parms: ["q" : keyword,"from":page]),
                                          success: {data in
                                             let jsonDecoder = JSONDecoder()
-                                                       if let model = try? jsonDecoder.decode(RecipeModel.self, from: data) {
-                                                           seal.fulfill(model)
-                                                       }else{
-                                                           seal.reject(NSError(domain: "", code: -1, userInfo: nil))
-                                                       }
-            },
+                                            if let model = try? jsonDecoder.decode(RecipeModel.self, from: data) {
+                                                seal.fulfill(model)
+                                            }else{
+                                                seal.reject(NSError(domain: "", code: -1, userInfo: nil))
+                                            }
+                                       },
                                          failure: {error in
                                             seal.reject(error)
                                             
-            })
+                                       }
+            )
             
               }
         
     }
     
     func getSuggession() -> [SuggessionModel] {
-        
         return []
     }
 }

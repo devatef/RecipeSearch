@@ -21,13 +21,8 @@ class RecipeCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var item: Hit? {
-          didSet {
-            guard  let item = item else {
-                  return
-              }
-              //set data here
-          }
+    func configureWith(item: Hit) {
+          
       }
       
       static var nib:UINib {
