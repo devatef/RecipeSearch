@@ -23,6 +23,8 @@
 		F0F5568023C685B0000B587B /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5567F23C685B0000B587B /* BaseRequest.swift */; };
 		F0F5568323C690C9000B587B /* RecipeSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5568223C690C9000B587B /* RecipeSearchRequest.swift */; };
 		F0FC1E1D23C8648700EB4CBB /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC1E1C23C8648700EB4CBB /* RecipeModel.swift */; };
+		F0FC1E1F23C8679B00EB4CBB /* RecipeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC1E1E23C8679B00EB4CBB /* RecipeRepo.swift */; };
+		F0FC1E2223C9D6E300EB4CBB /* SuggessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC1E2123C9D6E300EB4CBB /* SuggessionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		F0F5567F23C685B0000B587B /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		F0F5568223C690C9000B587B /* RecipeSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchRequest.swift; sourceTree = "<group>"; };
 		F0FC1E1C23C8648700EB4CBB /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		F0FC1E1E23C8679B00EB4CBB /* RecipeRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepo.swift; sourceTree = "<group>"; };
+		F0FC1E2123C9D6E300EB4CBB /* SuggessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggessionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				F0FC1E1C23C8648700EB4CBB /* RecipeModel.swift */,
+				F0FC1E2123C9D6E300EB4CBB /* SuggessionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 		F0F5568523C691D3000B587B /* Repos */ = {
 			isa = PBXGroup;
 			children = (
+				F0FC1E1E23C8679B00EB4CBB /* RecipeRepo.swift */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -331,6 +337,8 @@
 				F0F5565823C66F0D000B587B /* SceneDelegate.swift in Sources */,
 				F0F5567A23C6804A000B587B /* NetworkHelper.swift in Sources */,
 				F0F5567E23C681AD000B587B /* EndPoints.swift in Sources */,
+				F0FC1E1F23C8679B00EB4CBB /* RecipeRepo.swift in Sources */,
+				F0FC1E2223C9D6E300EB4CBB /* SuggessionModel.swift in Sources */,
 				F0F5567223C67D90000B587B /* RecipeDeatilsViewController.swift in Sources */,
 				F0F5568023C685B0000B587B /* BaseRequest.swift in Sources */,
 			);
