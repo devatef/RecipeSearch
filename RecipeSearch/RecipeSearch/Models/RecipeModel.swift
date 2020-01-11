@@ -75,13 +75,13 @@ enum Unit: String, Codable {
     case mg = "mg"
     case µg = "µg"
 }
-
+/*
 enum HealthLabel: String, Codable {
     case alcoholFree = "Alcohol-Free"
     case peanutFree = "Peanut-Free"
     case sugarConscious = "Sugar-Conscious"
     case treeNutFree = "Tree-Nut-Free"
-}
+}*/
 
 // MARK: - Ingredient
 struct Ingredient: Codable {
