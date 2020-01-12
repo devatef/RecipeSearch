@@ -13,6 +13,7 @@ target 'RecipeSearch' do
   pod 'RxCocoa'
   pod 'Kingfisher'
   pod 'RealmSwift'
-  
+  pod 'PKHUD'
+
 
 end
