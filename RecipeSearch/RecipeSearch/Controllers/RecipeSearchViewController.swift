@@ -33,12 +33,14 @@ class RecipeSearchViewController: UIViewController {
             
             recipeSearchViewModel.recipes.drive(onNext: {[unowned self] (_) in
                 self.tableView.reloadData()
-                HUD.hide()
+                DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+                  HUD.hide()
+                }
             }).disposed(by: disposeBag)
             
             recipeSearchViewModel.error.drive(onNext: {[unowned self] (error) in
                 self.infoLabel.isHidden = !self.recipeSearchViewModel.hasError
-                HUD.hide()
+                if(self.recipeSearchViewModel.hasError) {HUD.hide()}
                 self.infoLabel.text = error
                 DispatchQueue.main.asyncAfter(deadline: .now()+2) {
                     self.infoLabel.isHidden = true
