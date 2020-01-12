@@ -13,12 +13,15 @@ import RxCocoa
 
 class RecipeSearchViewModel {
     
-       private var  page = 0
+       private var _page = 0
+       private let _canLoadNextPage = BehaviorRelay<Bool>(value: false)
        private let disposeBag = DisposeBag()
        private let _recipes = BehaviorRelay<[Hit]>(value: [])
        private let _isFetching = BehaviorRelay<Bool>(value: false)
        private let _error = BehaviorRelay<String?>(value: nil)
        
+  
+    
        var isFetching: Driver<Bool> {
            return _isFetching.asDriver()
        }
@@ -34,6 +37,10 @@ class RecipeSearchViewModel {
        var hasError: Bool {
            return _error.value != nil
        }
+      
+       var shouldLoadNextPage: Bool {
+              return _canLoadNextPage.value
+        }
        
        var numberOfRecipes: Int {
            return _recipes.value.count
@@ -47,16 +54,20 @@ class RecipeSearchViewModel {
        }
        
      func fetchRecipes(searchWord:String) {
-           self._recipes.accept([])
+        guard !searchWord.isEmpty else {
+            return
+        }
            self._isFetching.accept(true)
            self._error.accept(nil)
         
-        RecipeRepo().searchFor(keyword: searchWord, page: page*10).done {[weak self] RecipeModel in
+        RecipeRepo().searchFor(keyword: searchWord, page: _page*10).done {[weak self] recipeModel in
+            print(recipeModel.hits.count)
             self?._isFetching.accept(false)
-            self?._recipes.accept(RecipeModel.hits)
-            
-
+            self?._recipes.accept((self?._recipes.value)!+recipeModel.hits)
+            self?._page += 1
+            self?._canLoadNextPage.accept(recipeModel.more)
         }.catch{[weak self] error in
+            print(error)
             self?._isFetching.accept(false)
             self?._error.accept(error.localizedDescription)
 
