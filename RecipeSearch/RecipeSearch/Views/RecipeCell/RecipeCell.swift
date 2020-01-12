@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecipeCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var healthLabel: UILabel!
+    @IBOutlet weak var recipeImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.accessoryType = .disclosureIndicator
         // Initialization code
     }
 
@@ -22,7 +28,10 @@ class RecipeCell: UITableViewCell {
     }
     
     func configureWith(item: Hit) {
-          
+        recipeImageView.kf.setImage(with: URL(string:item.recipe.image ), placeholder: UIImage(named: "default"))
+        titleLabel.text = item.recipe.label
+        sourceLabel.text = item.recipe.source
+        healthLabel.text = item.recipe.healthLabels.joined(separator: "\n")
       }
       
       static var nib:UINib {

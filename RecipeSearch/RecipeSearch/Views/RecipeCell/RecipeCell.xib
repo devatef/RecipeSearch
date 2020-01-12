@@ -59,6 +59,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="healthLabel" destination="US3-an-7ja" id="XBf-yf-g09"/>
+                <outlet property="recipeImageView" destination="jXm-Mk-afe" id="puS-8L-2id"/>
+                <outlet property="sourceLabel" destination="nFm-2r-HoA" id="2wM-LR-V9x"/>
+                <outlet property="titleLabel" destination="G5u-HV-ogx" id="pkv-Lu-ta6"/>
+            </connections>
             <point key="canvasLocation" x="79.710144927536234" y="35.825892857142854"/>
         </tableViewCell>
     </objects>
