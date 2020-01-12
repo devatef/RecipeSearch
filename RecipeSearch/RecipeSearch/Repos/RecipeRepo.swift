@@ -15,10 +15,16 @@ class RecipeRepo {
         return Promise{ seal in
             NetworkHelper.shared.getData(urlRequest: RecipeSearchRequest(parms: ["q" : keyword,"from":page]),
                                          success: {data in
+                                            let str = String(decoding: data, as: UTF8.self)
+                                            print(str)
                                             let jsonDecoder = JSONDecoder()
                                             if let model = try? jsonDecoder.decode(RecipeModel.self, from: data) {
                                                 seal.fulfill(model)
-                                            }else{
+                                            }else if let model = try? jsonDecoder.decode(LimitsError.self, from: data)
+                                            {
+                                                seal.reject(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey:model.message]))
+                                            }
+                                            else{
                                                 seal.reject(NSError(domain: "", code: -1, userInfo: nil))
                                             }
                                        },

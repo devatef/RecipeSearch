@@ -95,3 +95,9 @@ struct Total: Codable {
     let quantity: Double
     let unit: Unit
 }
+
+// MARK: - Error
+struct LimitsError: Codable {
+    let status: String
+    let message: String
+}
