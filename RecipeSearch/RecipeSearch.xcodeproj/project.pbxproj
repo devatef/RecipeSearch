@@ -26,6 +26,7 @@
 		F0FC1E1F23C8679B00EB4CBB /* RecipeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC1E1E23C8679B00EB4CBB /* RecipeRepo.swift */; };
 		F0FC1E2223C9D6E300EB4CBB /* SuggessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC1E2123C9D6E300EB4CBB /* SuggessionModel.swift */; };
 		F0FC1E2423C9D8A200EB4CBB /* RecipeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC1E2323C9D8A200EB4CBB /* RecipeSearchViewModel.swift */; };
+		F0FC1E2623CBA64500EB4CBB /* UIScrollView+loadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC1E2523CBA64500EB4CBB /* UIScrollView+loadMore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F0FC1E1E23C8679B00EB4CBB /* RecipeRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepo.swift; sourceTree = "<group>"; };
 		F0FC1E2123C9D6E300EB4CBB /* SuggessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggessionModel.swift; sourceTree = "<group>"; };
 		F0FC1E2323C9D8A200EB4CBB /* RecipeSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewModel.swift; sourceTree = "<group>"; };
+		F0FC1E2523CBA64500EB4CBB /* UIScrollView+loadMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+loadMore.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		F0F5568423C691C9000B587B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F0FC1E2523CBA64500EB4CBB /* UIScrollView+loadMore.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				F0F5567C23C680A7000B587B /* Constants.swift in Sources */,
 				F0F5565A23C66F0D000B587B /* RecipeSearchViewController.swift in Sources */,
 				F0F5568323C690C9000B587B /* RecipeSearchRequest.swift in Sources */,
+				F0FC1E2623CBA64500EB4CBB /* UIScrollView+loadMore.swift in Sources */,
 				F0F5565623C66F0D000B587B /* AppDelegate.swift in Sources */,
 				F0F5565823C66F0D000B587B /* SceneDelegate.swift in Sources */,
 				F0F5567A23C6804A000B587B /* NetworkHelper.swift in Sources */,
