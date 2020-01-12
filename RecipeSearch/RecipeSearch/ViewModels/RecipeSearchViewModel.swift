@@ -14,6 +14,7 @@ import RxCocoa
 class RecipeSearchViewModel {
     
        private var _page = 0
+       private var oldSearchTerm = ""
        private let _canLoadNextPage = BehaviorRelay<Bool>(value: false)
        private let disposeBag = DisposeBag()
        private let _recipes = BehaviorRelay<[Hit]>(value: [])
@@ -57,8 +58,13 @@ class RecipeSearchViewModel {
         guard !searchWord.isEmpty else {
             return
         }
-           self._isFetching.accept(true)
-           self._error.accept(nil)
+        if searchWord != oldSearchTerm {
+            self._recipes.accept([])
+            _page = 0
+        }
+        oldSearchTerm = searchWord
+        self._isFetching.accept(true)
+        self._error.accept(nil)
         
         RecipeRepo().searchFor(keyword: searchWord, page: _page*10).done {[weak self] recipeModel in
             print(recipeModel.hits.count)
