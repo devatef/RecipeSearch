@@ -7,8 +7,10 @@
 //
 
 import Foundation
-import Realm
+import RealmSwift
 
-class SuggessionModel {
-    
+class SuggessionModel:Object {
+    @objc dynamic var suggestion = ""
+    @objc dynamic var dateCreated = Date(timeIntervalSince1970: 1)
 }
+

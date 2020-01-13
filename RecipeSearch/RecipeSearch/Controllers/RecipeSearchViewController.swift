@@ -13,9 +13,16 @@ import PKHUD
 
 class RecipeSearchViewController: UIViewController {
    
+    private let suggssionTableHeight:CGFloat = 300
+    private let suggssionTableOriginX:CGFloat = 20
+    private let suggssionTableWidth:CGFloat = UIScreen.main.bounds.size.width-40
+
+    
      @IBOutlet weak var tableView: UITableView!
      @IBOutlet weak var infoLabel: UILabel!
+    
 
+    var suggestionController:SuggestionViewController!
         var recipeSearchViewModel: RecipeSearchViewModel!
         let disposeBag = DisposeBag()
 
@@ -26,6 +33,8 @@ class RecipeSearchViewController: UIViewController {
            setupSearchBarBinding()
            setupTableView()
            setupLoadMore()
+           addSuggestion()
+           bindSuggessionWithSearchbar()
         }
     
     private func setupRecipeViewModel(){
@@ -99,12 +108,38 @@ class RecipeSearchViewController: UIViewController {
             tableView?.rowHeight = UITableView.automaticDimension
             tableView?.register(RecipeCell.nib, forCellReuseIdentifier: RecipeCell.identifier)
         }
+    
+        private func addSuggestion(){
+
+            suggestionController = SuggestionViewController(nibName: String(describing: SuggestionViewController.self) , bundle: nil)
+            self.add(suggestionController, frame: CGRect(x: suggssionTableOriginX, y: self.topbarHeight, width: suggssionTableWidth, height: suggssionTableHeight))
+            suggestionController.view.alpha = 0
+        }
+    
+      private func bindSuggessionWithSearchbar(){
         
+        let searchBar = self.navigationItem.searchController!.searchBar
+        _=searchBar.rx.text
+                   .orEmpty
+                   .subscribe({[weak self] query in
+                       self?.suggestionController.view.alpha = searchBar.isFirstResponder ? 1 : 0
+                       self?.suggestionController.loadSuggession()
+                   })
+                   
+                    _=keyboardHeight()
+                          .drive(onNext: { [weak self] (value, animationDuration) in
+                            self?.suggestionController.view.alpha = value > 0 ? 1 : 0
+                            self?.suggestionController.loadSuggession()
+
+                   })
+        }
+    
     }
 
     extension RecipeSearchViewController: UITableViewDataSource, UITableViewDelegate {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            if(recipeSearchViewModel.numberOfRecipes < 1&&recipeSearchViewModel.lastSearchTerm != ""){showAlert(message: "there is no data for this search , try with other keyword :)")}
             return recipeSearchViewModel.numberOfRecipes
         }
         

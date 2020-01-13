@@ -38,7 +38,4 @@ class RecipeRepo {
         
     }
     
-    func getSuggession() -> [SuggessionModel] {
-        return []
-    }
 }

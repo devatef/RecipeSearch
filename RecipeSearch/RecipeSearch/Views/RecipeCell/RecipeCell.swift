@@ -33,13 +33,6 @@ class RecipeCell: UITableViewCell {
         sourceLabel.text = item.recipe.source
         healthLabel.text = item.recipe.healthLabels.joined(separator: "\n")
       }
-      
-      static var nib:UINib {
-          return UINib(nibName: identifier, bundle: nil)
-      }
-      
-      static var identifier: String {
-          return String(describing: self)
-      }
+    
     
 }

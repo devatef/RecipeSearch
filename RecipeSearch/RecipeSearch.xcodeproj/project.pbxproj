@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CD091275D0CDADE373FBF9E0 /* Pods_RecipeSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250BC27A58887576E03316F9 /* Pods_RecipeSearch.framework */; };
+		F026337923CD0C51005AA59B /* SuggessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F026337823CD0C51005AA59B /* SuggessionViewModel.swift */; };
+		F026337C23CD19D1005AA59B /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F026337A23CD19D1005AA59B /* SuggestionViewController.swift */; };
+		F026337D23CD19D1005AA59B /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F026337B23CD19D1005AA59B /* SuggestionViewController.xib */; };
+		F026338123CD1C97005AA59B /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F026337F23CD1C97005AA59B /* SuggestionCell.swift */; };
+		F026338223CD1C97005AA59B /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F026338023CD1C97005AA59B /* SuggestionCell.xib */; };
+		F026338423CD1D06005AA59B /* Cell+identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F026338323CD1D06005AA59B /* Cell+identifier.swift */; };
+		F026338623CD21A7005AA59B /* UIViewcontroller+addChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = F026338523CD21A7005AA59B /* UIViewcontroller+addChild.swift */; };
+		F026338923CD2EAA005AA59B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F026338823CD2EAA005AA59B /* Utils.swift */; };
 		F0F5565623C66F0D000B587B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5565523C66F0D000B587B /* AppDelegate.swift */; };
 		F0F5565823C66F0D000B587B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5565723C66F0D000B587B /* SceneDelegate.swift */; };
 		F0F5565A23C66F0D000B587B /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F5565923C66F0D000B587B /* RecipeSearchViewController.swift */; };
@@ -33,6 +41,14 @@
 		250BC27A58887576E03316F9 /* Pods_RecipeSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E1BCECA2E94C0FE4F91355 /* Pods-RecipeSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSearch.release.xcconfig"; path = "Target Support Files/Pods-RecipeSearch/Pods-RecipeSearch.release.xcconfig"; sourceTree = "<group>"; };
 		DA65B670FE2B62BD2FEECA83 /* Pods-RecipeSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSearch.debug.xcconfig"; path = "Target Support Files/Pods-RecipeSearch/Pods-RecipeSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		F026337823CD0C51005AA59B /* SuggessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggessionViewModel.swift; sourceTree = "<group>"; };
+		F026337A23CD19D1005AA59B /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		F026337B23CD19D1005AA59B /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
+		F026337F23CD1C97005AA59B /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		F026338023CD1C97005AA59B /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
+		F026338323CD1D06005AA59B /* Cell+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+identifier.swift"; sourceTree = "<group>"; };
+		F026338523CD21A7005AA59B /* UIViewcontroller+addChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+addChild.swift"; sourceTree = "<group>"; };
+		F026338823CD2EAA005AA59B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F0F5565223C66F0D000B587B /* RecipeSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F5565523C66F0D000B587B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F5565723C66F0D000B587B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +101,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F026337E23CD1C74005AA59B /* SuggestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				F026337F23CD1C97005AA59B /* SuggestionCell.swift */,
+				F026338023CD1C97005AA59B /* SuggestionCell.xib */,
+			);
+			path = SuggestionCell;
+			sourceTree = "<group>";
+		};
+		F026338723CD2E97005AA59B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F026338823CD2EAA005AA59B /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F0F5564923C66F0D000B587B = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +139,7 @@
 		F0F5565423C66F0D000B587B /* RecipeSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F026338723CD2E97005AA59B /* Utils */,
 				F0F5568523C691D3000B587B /* Repos */,
 				F0F5568423C691C9000B587B /* Extensions */,
 				F0F5566F23C67806000B587B /* Resources */,
@@ -145,6 +179,7 @@
 			children = (
 				F0F5565923C66F0D000B587B /* RecipeSearchViewController.swift */,
 				F0F5567123C67D90000B587B /* RecipeDeatilsViewController.swift */,
+				F026337A23CD19D1005AA59B /* SuggestionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,9 +187,11 @@
 		F0F5566C23C67731000B587B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F026337E23CD1C74005AA59B /* SuggestionCell */,
 				F0F5567023C67CF5000B587B /* RecipeCell */,
 				F0F5566023C66F0F000B587B /* LaunchScreen.storyboard */,
 				F0F5565B23C66F0D000B587B /* Main.storyboard */,
+				F026337B23CD19D1005AA59B /* SuggestionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				F0FC1E2323C9D8A200EB4CBB /* RecipeSearchViewModel.swift */,
+				F026337823CD0C51005AA59B /* SuggessionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -206,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				F0FC1E2523CBA64500EB4CBB /* UIScrollView+loadMore.swift */,
+				F026338323CD1D06005AA59B /* Cell+identifier.swift */,
+				F026338523CD21A7005AA59B /* UIViewcontroller+addChild.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -279,8 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0F5566223C66F0F000B587B /* LaunchScreen.storyboard in Resources */,
+				F026338223CD1C97005AA59B /* SuggestionCell.xib in Resources */,
 				F0F5565F23C66F0F000B587B /* Assets.xcassets in Resources */,
 				F0F5565D23C66F0D000B587B /* Main.storyboard in Resources */,
+				F026337D23CD19D1005AA59B /* SuggestionViewController.xib in Resources */,
 				F0F5567823C67F88000B587B /* RecipeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,16 +379,22 @@
 				F0F5567723C67F88000B587B /* RecipeCell.swift in Sources */,
 				F0FC1E1D23C8648700EB4CBB /* RecipeModel.swift in Sources */,
 				F0F5567C23C680A7000B587B /* Constants.swift in Sources */,
+				F026338123CD1C97005AA59B /* SuggestionCell.swift in Sources */,
 				F0F5565A23C66F0D000B587B /* RecipeSearchViewController.swift in Sources */,
 				F0F5568323C690C9000B587B /* RecipeSearchRequest.swift in Sources */,
 				F0FC1E2623CBA64500EB4CBB /* UIScrollView+loadMore.swift in Sources */,
 				F0F5565623C66F0D000B587B /* AppDelegate.swift in Sources */,
+				F026337923CD0C51005AA59B /* SuggessionViewModel.swift in Sources */,
+				F026338423CD1D06005AA59B /* Cell+identifier.swift in Sources */,
 				F0F5565823C66F0D000B587B /* SceneDelegate.swift in Sources */,
 				F0F5567A23C6804A000B587B /* NetworkHelper.swift in Sources */,
 				F0F5567E23C681AD000B587B /* EndPoints.swift in Sources */,
 				F0FC1E1F23C8679B00EB4CBB /* RecipeRepo.swift in Sources */,
 				F0FC1E2423C9D8A200EB4CBB /* RecipeSearchViewModel.swift in Sources */,
+				F026338623CD21A7005AA59B /* UIViewcontroller+addChild.swift in Sources */,
 				F0FC1E2223C9D6E300EB4CBB /* SuggessionModel.swift in Sources */,
+				F026338923CD2EAA005AA59B /* Utils.swift in Sources */,
+				F026337C23CD19D1005AA59B /* SuggestionViewController.swift in Sources */,
 				F0F5567223C67D90000B587B /* RecipeDeatilsViewController.swift in Sources */,
 				F0F5568023C685B0000B587B /* BaseRequest.swift in Sources */,
 			);

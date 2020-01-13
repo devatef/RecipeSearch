@@ -39,6 +39,10 @@ class RecipeSearchViewModel {
            return _error.value != nil
        }
       
+       var lastSearchTerm:String{
+           return oldSearchTerm
+       }
+    
        var shouldLoadNextPage: Bool {
               return _canLoadNextPage.value
         }
@@ -55,18 +59,21 @@ class RecipeSearchViewModel {
        }
        
      func fetchRecipes(searchWord:String) {
-        guard !searchWord.isEmpty else {
+        let searchTerm = searchWord.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !searchTerm.isEmpty else {
             return
         }
-        if searchWord != oldSearchTerm {
+        
+        SuggessionViewModel().saveSuggestion(suggest: searchTerm)
+
+        if searchTerm != oldSearchTerm {
             self._recipes.accept([])
             _page = 0
         }
-        oldSearchTerm = searchWord
+        oldSearchTerm = searchTerm
         self._isFetching.accept(true)
         self._error.accept(nil)
-        
-        RecipeRepo().searchFor(keyword: searchWord, page: _page*10).done {[weak self] recipeModel in
+        RecipeRepo().searchFor(keyword: searchTerm, page: _page*10).done {[weak self] recipeModel in
             print(recipeModel.hits.count)
             self?._isFetching.accept(false)
             self?._recipes.accept((self?._recipes.value)!+recipeModel.hits)
